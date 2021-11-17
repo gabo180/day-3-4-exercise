@@ -6,8 +6,21 @@ extra_cheese = input("Do you want extra cheese? Y or N ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
+bill = 0
 
-
-
-
-
+if size == "S":
+  bill = 15
+elif size == "M":
+  bill = 20
+elif size == "L":
+  bill = 25
+else:
+  print('Please type "S" for Small, "M" for Medium or "L" for Large(Uppercases and Lowercases matter!)')
+if add_pepperoni == "Y":
+  if size == "S":
+    bill += 2
+  elif size == "M" or size == "L":
+    bill += 3
+if extra_cheese == "Y":
+  bill += 1
+print(f'Your final bill is: ${bill}.')
